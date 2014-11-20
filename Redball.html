@@ -1,0 +1,225 @@
+<html>
+<head>
+<script type='text/javascript' src='http://lrn.icstars.org/redball.js'></script>
+<script> 
+function moveup(){
+
+if (redball.top >= 5) {
+redball.top = redball.top - 5;
+}
+
+}
+function movedown() {
+if (redball.top <= 510) {
+
+redball.top = redball.top + 5;
+}
+}
+function moveright() {
+if (redball.left <= 1060) {
+redball.left = redball.left + 5;
+};
+}
+function moveleft() {
+
+if (redball.left >= 5){
+redball.left= redball.left - 5;
+}
+
+}
+
+
+function movesquare() {
+moveup();
+moveup();
+moveup();
+moveup();
+moveright();
+moveright();
+moveright();
+moveright();
+movedown();
+movedown();
+movedown();
+movedown();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+}
+function center() {
+redball.left= 555;
+redball.top= 450;
+}
+
+function moveupright() {
+moveup();
+moveright();
+}
+function moveupleft() {
+ moveup();
+ moveleft();
+ }
+function movedownright() {
+movedown();
+moveright();
+}
+function movedownleft() {
+movedown();
+moveleft();
+}
+function diagonal() {
+moveupright();
+moveupleft();
+movedonwright();
+movedownleft();
+}
+function triangle() {
+for(var i= 1; i<=4; i++){
+moveupright();
+movedownright();
+}
+for(var i=1; i<=8; i++){
+moveleft();
+}
+}
+
+function octagon () {
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveupright();
+moveright();
+moveright();
+moveright();
+moveright();
+moveright();
+moveright();
+movedonwright();
+movedonwright();
+movedonwright();
+movedonwright();
+movedonwright();
+movedonwright();
+movedown();
+movedown();
+movedown();
+movedown();
+movedown();
+movedownleft();
+movedownleft();
+movedownleft();
+movedownleft();
+movedownleft();
+movedownleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveleft();
+moveupleft();
+moveupleft();
+moveupleft();
+moveupleft();
+moveupleft();
+moveupleft();
+moveup();
+moveup();
+moveup();
+moveup();
+moveup();
+moveup();
+
+}
+function bounce() {
+ for(var i= 1; i<= 10; i++){
+		moveup();
+		moveup();
+		moveup();
+		movedown();
+		movedown();
+		movedown();
+ 
+ }
+
+
+}
+
+
+</script>
+
+
+
+</head>
+<body>
+<img id="redball" src="rball.jpg" alt="redball" height="150" width="300">
+<button onclick = "movesquare()"> move square</button>
+<button onclick= "triangle()"> Triangle</button>
+<button onclick= "octagon()"> OCTAGON</button>
+<table>
+<tbody>
+
+<tr>
+<td>
+<button id="moveupleft" onclick= "moveupleft()">
+<img src="upleft.jpg" alt="moveupleft" height="75" width="125";>
+</button>
+</td>
+<td>
+<button id="moveup" onclick=  "moveup()">
+<img src= "up.jpg" alt="moveup" height="75" width="125";>
+</button>
+</td>
+<td>
+<button id= "moveupright()"onclick= "moveupright()">
+<img src="up-right.jpg" alt="moveupright" height="75" width= "125";>
+</button>
+</td>
+</tr>
+<tr>
+<td>
+<button id="moveleft"onclick= "moveleft()">
+<img src="left.jpg" alt="moveleft" height="75" width="125"; align= "left">
+</button>
+</td>
+<td>
+<button id="center" onclick = "center()">
+<img src="center.jpg" alt="movecenter" height="75" width="125";>
+</button>
+</td>
+<td>
+<button id="moveright"onclick = "moveright()">
+<img src="right.jpg" alt="moveright" height= "75" width="125";>
+</button>
+</td>
+</tr>
+<tr>
+<td>
+<button id="movedownleft" onclick= "movedownleft()">
+<img src="downleft.jpg" alt="movedownleft" height="75" width="125";>
+</button>
+</td>
+<td>
+<button id= "movedown" onclick= "movedown()">
+<img src="down.jpg" alt="movedown" height="75" width="125";>
+</button>
+</td>
+<td>
+<button id="movedownright" onclick= "movedownright()">
+<img src="downright.jpg" alt="movedonwright" height="75" width="125";>
+</button>
+</td>
+</tr>
+
+
+
+
+</tbody>
+</table>
+<button onclick= "bounce()">BOUNCE</button>
+</body>
+
+</html>
